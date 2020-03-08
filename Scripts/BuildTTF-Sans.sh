@@ -9,7 +9,7 @@ rm -rf Subset
 mkdir Subset
 
 # Locate to the work directory.
-cd source-han-sans-2.000R/SubsetOTF
+cd source-han-sans-2.001R/SubsetOTF
 
 # Convert otf files into ttf files in UPM 2048.
 for folder in CN TW HK JP KR
@@ -19,7 +19,7 @@ do
 	do
 		fontFileName="${fontPath##*/}"
 		fontFilePre="${fontFileName%.*}"
-		../../../otrebuild-mac --otf2ttf --UPM 2048 --removeGlyphNames --O1 -o $fontFilePre.ttf $fontPath
+		../../../otrebuild.exe --otf2ttf --UPM 2048 --removeGlyphNames --O1 -o $fontFilePre.ttf $fontPath
 		mv -f $fontFilePre.ttf ../../../Subset/
 	done
 	cd ..

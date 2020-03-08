@@ -9,7 +9,7 @@ rm -rf Full
 mkdir temp
 
 # Locate to the source directory.
-cd source-han-sans-2.000R/OTF
+cd source-han-sans-2.001R/OTF
 
 # Copy source files to the temporary directory.
 for folder in Japanese JapaneseHW Korean KoreanHW SimplifiedChinese SimplifiedChineseHW TraditionalChinese TraditionalChineseHK TraditionalChineseHKHW TraditionalChineseHW
@@ -27,7 +27,7 @@ for fontPath in *.otf
 do
 	fontFileName="${fontPath##*/}"
 	fontFilePre="${fontFileName%.*}"
-	../otrebuild-mac --otf2ttf --UPM 2048 --removeGlyphNames --O1 -o $fontFilePre.ttf $fontPath
+	../otrebuild --otf2ttf --UPM 2048 --removeGlyphNames --O1 -o $fontFilePre.ttf $fontPath
 done
 
 # Pack ttf files into ttc files.
