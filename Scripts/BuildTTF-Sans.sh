@@ -9,7 +9,7 @@ rm -rf Subset
 mkdir Subset
 
 # Locate to the work directory.
-cd source-han-sans-2.001R/SubsetOTF
+cd $1/SubsetOTF
 
 # Convert otf files into ttf files in UPM 2048.
 for folder in CN TW HK JP KR
